@@ -22,7 +22,7 @@
     },
     "core_pce_inflation": {
       "table_name": "T20304",
-      "target_description": "Personal consumption expenditures excluding food and energy",
+      "target_description": "PCE excluding food and energy",
       "frequency": "Q",
       "unit": "Index number",
       "analytical_context": "The Fed's preferred sticky inflation metric. Drives rate-cut/hike probabilities."
