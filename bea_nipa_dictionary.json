@@ -1,0 +1,59 @@
+{
+  "api_config": {
+    "base_url": "https://apps.bea.gov/api/data",
+    "dataset": "NIPA",
+    "auth_param": "UserID",
+    "default_years": 5
+  },
+  "indicators": {
+    "gdp_real_growth": {
+      "table_name": "T10101",
+      "target_description": "Gross domestic product",
+      "frequency": "Q",
+      "unit": "Percent",
+      "analytical_context": "Headline momentum. Must be compared against Final Sales to detect inventory-driven illusions."
+    },
+    "gdp_real_level": {
+      "table_name": "T10106",
+      "target_description": "Gross domestic product",
+      "frequency": "Q",
+      "unit": "Billions of chained dollars",
+      "analytical_context": "Absolute inflation-adjusted output baseline."
+    },
+    "core_pce_inflation": {
+      "table_name": "T20304",
+      "target_description": "Personal consumption expenditures excluding food and energy",
+      "frequency": "Q",
+      "unit": "Index number",
+      "analytical_context": "The Fed's preferred sticky inflation metric. Drives rate-cut/hike probabilities."
+    },
+    "personal_income_monthly": {
+      "table_name": "T20100",
+      "target_description": "Personal income",
+      "frequency": "M",
+      "unit": "Billions of dollars",
+      "analytical_context": "High-frequency monthly proxy. Critical for running bridge equations to nowcast quarterly GDP."
+    },
+    "savings_rate_monthly": {
+      "table_name": "T20100",
+      "target_description": "Personal saving rate",
+      "frequency": "M",
+      "unit": "Percent",
+      "analytical_context": "Consumer buffer. Structural depletion signals forced future spending contractions."
+    },
+    "final_sales_domestic": {
+      "table_name": "T10102",
+      "target_description": "Final sales to domestic purchasers",
+      "frequency": "Q",
+      "unit": "Billions of dollars",
+      "analytical_context": "True structural demand. Strips out trade deficits and inventory noise."
+    },
+    "change_inventories": {
+      "table_name": "T10101",
+      "target_description": "Change in private inventories",
+      "frequency": "Q",
+      "unit": "Billions of dollars",
+      "analytical_context": "Supply chain gluts. Unusual spikes here often precede future GDP contractions as firms halt production."
+    }
+  }
+}
